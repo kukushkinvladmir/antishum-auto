@@ -1,0 +1,556 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.hidden
+  display: none
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+ul
+  margin: 0
+  padding: 0
+  li
+    list-style: none
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+.logo
+	padding-top: 8px
+	display: block 
+
+.text-center
+  text-align: center
+.text-left
+  text-align: left
+.text-right
+  text-align: right 
+
+b, strong
+	font-weight: bold
+
+.main_head
+  background-image: url(/img/background/head_bg1.jpg)
+  min-height: 100vh
+  background-size: cover
+  overflow: hidden
+  a
+    color: #fff
+    text-decoration: none
+    &:hover
+      color: #fff
+  h1
+    text-transform: uppercase   
+    text-align: left
+    font-size: 40px
+    margin-top: 35px
+    margin-left: 30px
+    font-family: bebasbook
+    letter-spacing: 1px
+    
+.mnu_line
+  min-height: 50px
+  background-color: #404D5E
+  width: 100%
+  z-index: 1
+
+.main-mnu
+  text-align: center
+  display: none
+  ul
+    height: 50px
+    line-height: 50px
+    margin: 0
+    padding: 0
+  li
+    display: inline-block
+    padding: 0 10px
+    font-family: RobotoRegular
+    &.active a
+      text-decoration: underline
+
+.hidden-mnu
+  display: none
+  ul
+    li
+      display: block
+      &.active, &:hover
+        background-color: #4EB7D7
+      &.active a, a:hover
+        text-decoration: none
+    min-height: 250px
+
+.phone_wrap
+  text-align: right
+  position: relative
+
+.phone_number
+  color: #fff
+  font-family: BebasBold
+  font-size: 25px
+  line-height: 1
+  fa
+    font-size: 15px
+
+.auto_callback
+  border-bottom: 1px dashed #fff
+  transition: all .25s ease
+
+.phone_wrap .auto_callback
+  &:hover
+    text-decoration: none
+    border-color: transparent
+  &:focus
+    color: #fff
+    outline: none
+    text-decoration: none
+
+.bullets_wrap
+  padding-left: 30px
+
+.main_head_bullets
+  margin-top: 40px
+  margin-bottom: 30px
+
+.h3_sale span
+  background-color: red
+  color: #fff
+  padding: 15px
+  font-family: Exo2Bold
+  border-radius: 50%
+
+.main_head_bullets
+  h4
+    text-decoration: underline
+    margin-bottom: 20px
+  li
+    text-transform: uppercase
+    font-size: 15px
+    margin-top: 10px
+    font-weight: bold
+    i.fa
+      color: #DB0800
+
+.button
+  color: #fff
+  font-family: BebasRegular
+  display: inline-block
+  background-color: #4EB7D7
+  height: 50px
+  line-height: 50px
+  padding: 0 15px
+  font-size: 20px
+  border-bottom: 3px solid #33768B
+  letter-spacing: 1px
+  &:hover
+    text-decoration: none
+    color: #fff
+    background-color: #6EBED7
+
+focus
+  text-decoration: none
+  color: #fff
+  background-color: #6EBED7
+
+.button:active
+  background-color: #33768B
+      
+header .button
+  padding-left: 50px
+  background-repeat: no-repeat
+  background-position: top left
+  font-size: 16px
+
+.button_price
+  background-image: url(/img/price.png)
+
+.toggle-mnu
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 14px
+  span
+    &:after, &:before
+      content: ""
+      position: absolute
+      left: 0
+      top: 9px
+    &:after
+      top: 18px
+      width: 100%
+      height: 2px
+      background-color: #fff
+      transition: all 0.3s
+      backface-visibility: hidden
+      border-radius: 2px
+    position: relative
+    display: block
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+    &:before
+      width: 100%
+      height: 2px
+      background-color: #fff
+      transition: all 0.3s
+      backface-visibility: hidden
+      border-radius: 2px
+  &.on span
+    background-color: transparent
+    &:before
+      transform: rotate(45deg) translate(-1px, 0px)
+    &:after
+      transform: rotate(-45deg) translate(6px, -7px)
+
+.mfp-no-margins 
+  img.mfp-img 
+    padding: 0
+
+
+.mfp-no-margins 
+  .mfp-figure:after 
+    top: 0
+    bottom: 0
+
+.mfp-no-margins 
+  .mfp-container 
+    padding: 0
+
+
+.mfp-with-zoom
+  .mfp-container, &.mfp-bg
+    opacity: 0
+    -webkit-backface-visibility: hidden    
+    -webkit-transition: all 0.25s ease-out
+    -moz-transition: all 0.25s ease-out
+    -o-transition: all 0.25s ease-out
+    transition: all 0.25s ease-out
+  &.mfp-ready
+    .mfp-container
+      opacity: 1
+    &.mfp-bg
+      opacity: 0.8
+  &.mfp-removing
+    .mfp-container, &.mfp-bg
+      opacity: 0
+
+.thumbnail
+  width: 100%
+  position: relative
+  z-index: 0
+  text-decoration: none
+  font: 13px sans-serif
+  color: #353535
+  &:hover
+    background-color: transparent
+    z-index: 50
+  span
+  
+    position: absolute
+    padding: 5px
+    left: -1000px
+    visibility: hidden
+    text-decoration: none
+    border-radius: 4px 4px 4px 4px
+    -moz-border-radius: 4px 4px 4px 4px
+    -webkit-border-radius: 4px 4px 4px 4px
+    img
+      
+      padding: 2px
+  &:hover span
+  
+    background-color: #fff
+    padding: 5px
+    border: 1px solid #91B6B6
+    visibility: visible
+    top: -50px
+    left: 270px
+    
+
+
+
+
+
+section
+  h2
+    text-align: center
+    font-family: bebasbold
+    letter-spacing: 2px
+    font-size: 40px
+    margin-bottom: 30px
+  h3
+    font-family: opensanslight
+    text-transform: uppercase
+  img
+    display: block
+
+.ta_right
+  text-align: left
+  border-left: 2px solid $blue
+  border-bottom: 2px solid $blue
+
+.ta_left
+  text-align: right
+  border-right: 2px solid $blue
+  border-bottom: 2px solid $blue
+
+.s-wide
+  padding: 80px 0
+
+.s-dark
+  background-color: $dark
+  color: #fff
+
+.s-gray
+  background-color: #f8f8f8
+  color: #000
+
+.s-adv
+  padding: 30px 0
+
+.s-adv-item
+  font-family: OpenSansLight, sans-serif
+  line-height: 21px
+  text-align: center
+  margin: 15px 0
+  h3
+    margin: 0
+    font-size: 20px
+    font-family: Exo2Bold, sans-serif
+    span
+      font-size: 34px
+      color: $accent
+  p
+    margin: 10px 0 0
+
+.plus_wrap
+  padding: 10px
+  min-height: 120px
+  margin: 20px 0
+  h3
+    font-family: bebasbold
+
+.s-product
+  h3
+    border-bottom: 1px solid #fff
+    margin-bottom: 30px
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+  h4
+    font-family: opensanslight
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+  p
+    font-family: opensanslight
+  span
+    display: block
+  img
+    border: 2px solid #fff
+    width: 100%
+
+.product-item-wrap
+  margin-bottom: 50px
+  padding-left: 15px
+
+.s-product a
+  color: #fff
+  font-family: opensansregular
+  text-transform: uppercase
+  font-size: 18px
+  transition: all .25s ease
+  border-bottom: 2px dashed #fff
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+  &:hover
+    color: #fff !important
+    text-decoration: none
+    border-color: transparent
+
+a:focus
+  color: #fff !important
+  text-decoration: none
+  border-color: transparent
+
+.s-why
+  background-image: url(/img/background/why_bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: top center
+  img
+    max-width: 100px
+    border: none
+    margin: auto
+
+.s-why-item
+  text-align: center
+
+.vsrok img
+  animation-delay: .3s
+  animation-duration: 4s !important
+
+.bestprice img
+  animation-delay: .5s
+  animation-duration: 4s !important
+
+.kachestvo img
+  animation-delay: .7s
+  animation-duration: 4s !important
+
+.sertif img
+  animation-delay: .9s
+  animation-duration: 4s !important
+
+.popup-gallery
+  text-align: center
+  a img
+    max-width: 200px
+    display: inline-block
+    margin: 10px
+
+.map_wrapper
+  margin-bottom: 40px
+.contacts_text
+  margin-top: 30px
+  h3
+    text-transform: uppercase
+    font-size: 22px
+    font-family: robotoregular
+
+.contact_box_wrap
+  animation-duration: 2s !important
+
+.contact_box h3
+  margin-bottom: 0
+  font-size: 20px
+
+.form_wrap
+  animation-duration: 2s !important
+
+.form-group
+  display: block
+  margin-bottom: 15px
+  input, textarea
+    background-color: 
+    border: 1px solid #ccc
+    display: block
+    font-size: 12px
+    line-height: 40px
+    margin-top: 5px
+    text-indent: 12px
+    width: 100%
+
+.hid_form
+  position: relative
+  overflow: hidden  
+  max-width: 320px
+  margin: auto
+  color: #fff
+  background: #404D5E
+  padding: 15px
+  button
+    color: #fff
+    background-color: $accent 
+    border: none
+    padding: 10px 20px
+    display: block
+    margin: auto
+    text-transform: uppercase
+    letter-spacing: 1px
+    margin-top: 20px
+    z-index: 0
+.mfp-close
+  padding: 2px !important
+  top: -19px
+  &:active
+    top: -19px
+
+.form_head
+  margin-bottom: 20px
+  padding-top: 30px
+  h3
+    text-transform: uppercase
+    text-align: center
+    color: $accent
+  p
+    text-align: center
+    font-family: opensanslight
+
+.s-footer
+  background-color: #2B343F
+  padding: 20px 0
+  .mnu_line
+    background: transparent
+  a
+    color: #fff
+    &:hover
+      color: #fff
+      text-decoration: underline
+
+.success
+  color: #fff
+  background-color: $dark
+  position: absolute
+  z-index: 1
+  left: 0
+  height: 100%
+  width: 100%
+  display: flex
+  top: -100% 
+  opacity: 0
+  transition: all .5s ease 
+  p
+    margin: auto
+    display: flex
+  &.active
+    top: 0 
+    opacity: 1 
+
+.cont_success
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  text-transform: uppercase
+  z-index: 10
+  span
+    margin: auto
+    font-weight: bold
+    color: #353535
+  & ~ *
+    transition: all 1s ease
+  &.active
+    & ~ *
+      opacity: .5
+      filter: blur(10px)   
+
+
+
+@import "media" // Always at the end

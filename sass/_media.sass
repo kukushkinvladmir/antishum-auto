@@ -1,0 +1,84 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// 1200px ≥
++media-breakpoint-down(xl)
+	.toggle-mnu
+		display: none
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.toggle-mnu
+		display: none
+	.s-adv-item h3
+		font-size: 16px	
+	  	
+// ≥992px
++media-breakpoint-down(md)
+	.toggle-mnu
+		display: block
+		position: absolute
+		right: -40px
+		top: 0
+	.main_head
+	  background-size: unset
+	  background-image: url(/img/background/head_bg11.jpg)	
+	.h3_sale
+		font-size: 18px  
+	.h3_sale span
+		padding: 7px 
+
+	.animated  
+	  -o-transition-property: none !important
+	  -moz-transition-property: none !important
+	  -ms-transition-property: none !important
+	  -webkit-transition-property: none !important
+	  transition-property: none !important
+	 
+	  -o-transform: none !important
+	  -moz-transform: none !important
+	  -ms-transform: none !important
+	  -webkit-transform: none !important
+	  transform: none !important
+	 
+	  -webkit-animation: none !important
+	  -moz-animation: none !important
+	  -o-animation: none !important
+	  -ms-animation: none !important
+	  animation: none !important	 
+
+// ≥768px
++media-breakpoint-down(sm)
+	.h3_sale
+  	font-size: 18px
+	.main_head
+	  background-size: unset
+	  background-image: url(/img/background/head_bg11.jpg)
+// ≥576px
++media-breakpoint-down(xs)
+	.logo
+		text-align: center		
+	.phone_wrap
+		text-align: center
+		margin: 15px 0
+	.toggle-mnu
+		right: 0
+		
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
