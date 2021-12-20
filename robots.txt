@@ -1,0 +1,25 @@
+User-agent: *
+
+Allow: /img/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /libs/
+ 
+
+User-agent: Googlebot
+
+Allow: /
+
+ 
+
+User-agent: Yandex
+
+Allow: /img/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /libs/
+
+Host: https://antishum-auto.ru
+Sitemap: https://antishum-auto.ru/sitemap.xml
